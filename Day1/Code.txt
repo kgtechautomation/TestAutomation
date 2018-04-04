@@ -1,0 +1,85 @@
+//Initial Steps:
+//1. Launch Visual Studio and Slect "File > New > Project"
+//2. Select Under C#, Console Application and provide name and start
+
+using System;
+using System.Collections.Generic;
+
+namespace ConsoleApplication1
+{
+    class Car
+    {
+        #region Constructor
+        public Car()
+        {
+
+        }
+
+        public Car(string model, int doorCount, int gearCount, int seats)
+        {
+            Model = model;
+            numberOfDoors = doorCount;
+            noOfGears = gearCount;
+            noOfSeats = seats;
+            for(int i =0; i < 10; i++)
+            {
+
+            }
+        }
+        #endregion 
+
+        #region data member
+        int speed;
+        string Model;
+        int numberOfDoors;
+        int noOfGears;
+        float engineTemp;
+        int noOfSeats;
+        private int currentGear = 0;
+        #endregion
+
+        #region Methods
+        public void Start() { }
+        public void Stop() { }
+        public void OpenDoor() { }
+        public void Accelerate() { }
+        public void Brake() { }
+
+        public void ChangeGear() {
+            currentGear = currentGear + 1;
+        }
+
+        public int GetCurrentGear()
+        {
+            return currentGear;
+        }
+        public void DisplayCarDetails()
+        {
+            Console.WriteLine("Model: " + Model);
+            Console.WriteLine("Doors: " + numberOfDoors);
+            Console.WriteLine("Gears: " + noOfGears);
+            Console.WriteLine("Seats: " + noOfSeats);
+        }
+        private void ShiftGearOnGearBox() { }
+        #endregion
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Car car = new Car();
+            car.DisplayCarDetails();
+            Car car2 = new Car("Swift", 5, 5, 5);
+            car2.DisplayCarDetails();
+
+            Console.WriteLine("Current gear: " + car2.GetCurrentGear());
+            car2.ChangeGear();
+            int currentGearValue = car2.GetCurrentGear();
+            Console.WriteLine("Current gear: "+currentGearValue );
+
+            Console.ReadKey();
+            
+        }
+    }
+}

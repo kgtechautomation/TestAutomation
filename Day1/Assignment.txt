@@ -1,0 +1,7 @@
+//Assignment
+//Create a Calculator class which has 4 public methods: Add, Sub, Mul, Div and one other method GetLastReult()
+//Private varibale "lastResult" to hold whatever is previous comuptation result
+//int Add(float, float)
+//int Sub()
+//int mul(int, int)
+//float div(int, int)
